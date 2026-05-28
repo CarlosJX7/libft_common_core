@@ -99,7 +99,7 @@ make
 - `ft_putendl_fd` - Outputs a string followed by a newline character (`\n`) to a file descriptor.
 - `ft_putnbr_fd` - Outputs an integer as text to a specified file descriptor.
 
-### Part 3: Linked List Data Structures (Bonus)
+### Part 3: Linked List Data Structures
 
 Implementation of a singly linked list API utilizing the following type definition:
 
@@ -235,35 +235,6 @@ Artificial Intelligence tools were used for:
 - Improving code comments and documentation
 
 All code has been reviewed and validated by the author to ensure compliance with project requirements.
-
-### Sources
-
-- [Add your own references and links here]
-
----
-
-## Detailed Library Description
-
-Libft provides a set of C functions for character checks, memory operations, string manipulation, conversions, and linked list management. The library is designed to be modular and reusable, with all functions implemented from scratch according to the 42 Norm.
-
-### Features
-
-- Character classification and conversion (e.g., `ft_isalpha`, `ft_isdigit`, `ft_tolower`, `ft_toupper`)
-- Memory manipulation (e.g., `ft_memset`, `ft_bzero`, `ft_memcpy`, `ft_calloc`)
-- String operations (e.g., `ft_strlen`, `ft_strlcpy`, `ft_strncmp`, `ft_split`)
-- Conversion functions (e.g., `ft_atoi`, `ft_itoa`)
-- File descriptor output (e.g., `ft_putchar_fd`, `ft_putstr_fd`)
-- Linked list utilities (e.g., `ft_lstnew`, `ft_lstadd_back`, `ft_lstmap`)
-
----
-
-## Sources Skeleton
-
-| Name/Title | Link | Description |
-|------------|------|-------------|
-|            |      |             |
-|            |      |             |
-|            |      |             |
 
 ---
 

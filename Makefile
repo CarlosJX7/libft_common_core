@@ -46,7 +46,7 @@ $(NAME): $(OBJECTS)
 		echo " | |____ _| |_| |_) | |       | |   "; \
 		echo " |______|_____|____/|_|       |_|   "; \
 		echo "                                    "; \
-		echo "        $(WHITE)By: mapena-z$(CYAN)           "; \
+		echo "        $(WHITE)By: carlinaq$(CYAN)           "; \
 		echo "$(NC)"; \
 	fi
 	@$(CC) $(CFLAGS) -c $< -o $@

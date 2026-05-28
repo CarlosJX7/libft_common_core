@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_create_str(int n, size_t len)
+static char	*ft_create_str(int n, size_t len)
 {
 	char	*str;
 	size_t	i;
@@ -40,7 +40,7 @@ char	*ft_create_str(int n, size_t len)
 	return (str);
 }
 
-size_t	ft_int_len(long n)
+static size_t	ft_int_len(long n)
 {
 	size_t	i;
 
