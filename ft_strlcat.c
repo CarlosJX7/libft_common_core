@@ -23,7 +23,7 @@ static size_t	min_dst_len(char *dst, size_t size)
 		return (size);
 }
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	dlen_min;
 	size_t	slen;

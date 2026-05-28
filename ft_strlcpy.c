@@ -29,3 +29,47 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	dst[i] = '\0';
 	return (src_len);
 }
+
+// #include <string.h>
+// #include <stdio.h>
+// #include <bsd/string.h>
+// int main(void)
+// {
+// 	{
+// 		char dst[100] = "--";
+// 		char *src = "Hello World--";
+// 		printf("r = %zu\n", strlcpy(dst, src, 0));
+// 		printf(">%s<\n", dst);
+// 	}
+// 	{
+// 		char dst[100] = "--";
+// 		char *src = "Hello World--";
+// 		printf("r = %zu\n", ft_strlcpy(dst, src, 0));
+// 		printf(">%s<\n", dst);
+// 	}
+// 	{
+// 		char dst[100] = "--";
+// 		char *src = "Hello World--";
+// 		printf("r = %zu\n", strlcpy(dst, src, 1));
+// 		printf(">%s<\n", dst);
+// 	}
+// 	{
+// 		char dst[100] = "--";
+// 		char *src = "Hello World--";
+// 		printf("r = %zu\n", ft_strlcpy(dst, src, 1));
+// 		printf(">%s<\n", dst);
+// 	}
+// 	{
+// 		char dst[100] = "--";
+// 		char *src = "Hello World--";
+// 		printf("r = %zu\n", strlcpy(dst, src, 100000));
+// 		printf(">%s<\n", dst);
+// 	}
+// 	{
+// 		char dst[100] = "--";
+// 		char *src = "Hello World--";
+// 		printf("r = %zu\n", ft_strlcpy(dst, src, 100000));
+// 		printf(">%s<\n", dst);
+// 	}
+// 	return 0;
+// }

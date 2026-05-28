@@ -24,3 +24,24 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
+
+// #include <stdio.h>
+// t_list *create_test_list(void)
+// {
+// 	char *content = "Hola mundo";
+// 	t_list *n1 = ft_lstnew((void *)content);
+// 	t_list *n2 = ft_lstnew((void *)content);
+// 	t_list *n3 = ft_lstnew((void *)content);
+
+// 	n1->next = n2;
+// 	n2->next = n3;
+// 	n3->next = NULL;
+// 	return n1;
+// }
+// int main(void)
+// {
+// 	t_list *lst = create_test_list();
+// 	printf("Tamaño de la lista: %d\n", ft_lstsize(lst));
+// 	ft_lstclear(&lst, NULL); // content es char *
+// 	return 0;
+// }

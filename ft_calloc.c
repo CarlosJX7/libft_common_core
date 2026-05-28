@@ -16,6 +16,7 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	unsigned char	*mem;
 	size_t			total;
+	size_t			i;
 
 	if (size != 0 && count > SIZE_MAX / size)
 		return (NULL);
@@ -23,10 +24,11 @@ void	*ft_calloc(size_t count, size_t size)
 	mem = malloc(total);
 	if (!mem)
 		return (NULL);
-	while (total > 0)
+	i = 0;
+	while (i < total)
 	{
-		mem[total - 1] = 0;
-		total--;
+		mem[i] = 0;
+		i++;
 	}
 	return ((void *)mem);
 }
