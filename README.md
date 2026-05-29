@@ -222,10 +222,9 @@ To ensure your environment is set up correctly and the library functions as inte
 
 ## Resources
 
-- [C Standard Library documentation](https://en.cppreference.com/w/c)
 - [42 Norminette](https://github.com/42School/norminette)
-- [Memory Management in C (GeeksforGeeks)](https://www.geeksforgeeks.org/memory-management-c/)
-- [Pointers in C (Tutorialspoint)](https://www.tutorialspoint.com/cprogramming/c_pointers.htm)
+- [Memory Management](https://docs.utnso.com.ar/guias/programacion/punteros)
+- [Linked lists](https://www.learn-c.org/en/Linked_lists)
 
 ### Use of AI
 

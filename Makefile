@@ -1,12 +1,10 @@
 NAME = libft.a
 
 CC = cc
-
 CFLAGS = -Wall -Wextra -Werror
 
 AR = ar rcs
-
-RM = rm -rf
+RM = rm -f
 
 SOURCES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_strlen.c ft_bzero.c ft_isprint.c ft_strlcpy.c ft_strlcat.c \
 			ft_toupper.c ft_tolower.c ft_strchr.c ft_strrchr.c ft_strncmp.c ft_strnstr.c ft_atoi.c ft_memset.c ft_memcpy.c ft_memmove.c \
@@ -16,64 +14,22 @@ SOURCES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_strlen.c ft_bze
 
 OBJECTS = $(SOURCES:.c=.o)
 
-GREEN = \033[0;32m
-NC = \033[0m
-RED = \033[0;31m
-YELLOW = \033[0;33m
-CYAN = \033[0;36m
-WHITE = \033[1;37m
-
-TOTAL_OBJ = $(words $(OBJECTS))
-
 all: $(NAME)
 
-bonus: $(NAME)
-
 $(NAME): $(OBJECTS)
-	@$(AR) $(NAME) $(OBJECTS)
-	@$(MAKE) -s progress
-	@echo ""
-	@echo "$(GREEN)libft compilation completed!$(NC)"
+	$(AR) $(NAME) $(OBJECTS)
 
 %.o: %.c
-	@$(eval COMPLETED = $(shell ls -1 *.o 2>/dev/null | wc -l))
-	@if [ $(COMPLETED) -eq 0 ]; then \
-		echo "$(CYAN)"; \
-		echo "  _      _____ ____  ______ _______ "; \
-		echo " | |    |_   _|  _ \|  ____|__   __|"; \
-		echo " | |      | | | |_) | |__     | |   "; \
-		echo " | |      | | |  _ <|  __|    | |   "; \
-		echo " | |____ _| |_| |_) | |       | |   "; \
-		echo " |______|_____|____/|_|       |_|   "; \
-		echo "                                    "; \
-		echo "        $(WHITE)By: carlinaq$(CYAN)           "; \
-		echo "$(NC)"; \
-	fi
-	@$(CC) $(CFLAGS) -c $< -o $@
-	@$(MAKE) -s progress
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	@$(RM) $(OBJECTS)
-	@echo "$(YELLOW)Cleaning up object files for libft...$(NC)"
+	$(RM) $(OBJECTS)
 
-fclean:
-	@$(RM) $(OBJECTS) $(NAME)
-	@echo "$(RED)libft fully cleaned!$(NC)"
+fclean: clean
+	$(RM) $(NAME)
 
 re: fclean all
 
-progress:
-	@$(eval COMPLETED = $(shell ls -1 $(OBJECTS) 2>/dev/null | wc -l))
-	@# Protegemos contra división por cero si no hay objetos todavía
-	@if [ $(TOTAL_OBJ) -gt 0 ]; then \
-		PERCENTAGE=$$(echo "scale=2; 100 * $(COMPLETED) / $(TOTAL_OBJ)" | bc); \
-		BAR_LENGTH=50; \
-		FILLED_LENGTH=$$(echo "$$BAR_LENGTH * $(COMPLETED) / $(TOTAL_OBJ)" | bc); \
-		EMPTY_LENGTH=$$(echo "$$BAR_LENGTH - $$FILLED_LENGTH" | bc); \
-		BAR=$$(yes "=" | head -n $$FILLED_LENGTH | tr -d '\n'); \
-		EMPTY=$$(yes " " | head -n $$EMPTY_LENGTH | tr -d '\n'); \
-		echo -n "$(GREEN)[$$BAR$$EMPTY] $$PERCENTAGE%\r"; \
-	fi
-	@sleep 0.02
+bonus: all
 
-.PHONY: all clean fclean re progress
+.PHONY: all clean fclean re bonus
